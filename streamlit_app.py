@@ -9,7 +9,7 @@ st.set_page_config(page_title="HIV Care & Treatment Outcomes", page_icon="🩺",
 # ---------- Data loading ----------
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\Nanya\HIV_Care\data\HIV_Analysis_Ready.csv")
+    df = pd.read_csv("data/HIV_Analysis_Ready.csv")
     df["date_art_started"] = pd.to_datetime(df["date_art_started"], errors="coerce")
     df["art_start_year"] = df["date_art_started"].dt.year
     stage_order = ["I", "II", "III", "IV"]
@@ -233,6 +233,6 @@ with tab4:
 st.markdown("---")
 with st.expander("🔍 View filtered raw data"):
     st.dataframe(fdf, use_container_width=True)
-    st.download_button("Download filtered data as CSV", fdf.to_csv(index=False), "filtered_hiv_HIV_Analysis_Ready.csv", "text/csv")
+    st.download_button("Download filtered data as CSV", fdf.to_csv(index=False), "filtered_HIV_Analysis_Ready.csv", "text/csv")
 
 st.caption("Dashboard built from HIV_Analysis_Ready_18_60 dataset · For monitoring & program insight purposes.")
