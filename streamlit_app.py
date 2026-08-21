@@ -85,7 +85,7 @@ insights = [
     "a higher rate of those with 'Good' adherence.",
     "**Viral suppression essentially eliminates mortality risk** in this data: suppressed patients have a "
     "0.07% death rate vs. 1.5% for unsuppressed.",
-    "**ART interruption is strongly associated with death**: interrupted patients die at **6.7x** the rate "
+    "**ART interruption is strongly associated with death**: interrupted patients die at **6.5x** the rate "
     "of those with continuous treatment (3.9% vs 0.6%).",
     "**Women make up 70% of the cohort** but have a lower mortality rate than men (0.72% vs 1.16%), "
     "consistent with men presenting later or engaging less with care.",
