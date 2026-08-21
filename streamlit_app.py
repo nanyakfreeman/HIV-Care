@@ -80,17 +80,15 @@ st.markdown("---")
 st.subheader("Key Insights")
 insights = [
     "**Overall mortality is low (0.85%)** across the cohort, but it rises sharply with clinical severity: "
-    "**0.6% at Stage I vs. 2.8% at Stage IV** — a nearly 5x gap.",
+    "**0.6% at Stage I vs. 2.8% at Stage IV**.",
     "**Adherence is the strongest modifiable risk factor.** Patients with 'Poor' adherence die at "
-    "**7.4x the rate** of those with 'Good' adherence (4.0% vs. 0.5%).",
+    "a higher rate of those with 'Good' adherence.",
     "**Viral suppression essentially eliminates mortality risk** in this data: suppressed patients have a "
-    "0.07% death rate vs. 1.5% for unsuppressed — a **~23x difference**.",
+    "0.07% death rate vs. 1.5% for unsuppressed.",
     "**ART interruption is strongly associated with death**: interrupted patients die at **6.7x** the rate "
     "of those with continuous treatment (3.9% vs 0.6%).",
     "**Women make up 70% of the cohort** but have a lower mortality rate than men (0.72% vs 1.16%), "
     "consistent with men presenting later or engaging less with care.",
-    "**Viral load testing coverage is a gap**: ~46% of records have no viral load result, limiting how much "
-    "suppression can be tracked cohort-wide.",
 ]
 for i in insights:
     st.markdown(f"- {i}")
@@ -234,5 +232,3 @@ st.markdown("---")
 with st.expander("🔍 View filtered raw data"):
     st.dataframe(fdf, use_container_width=True)
     st.download_button("Download filtered data as CSV", fdf.to_csv(index=False), "filtered_HIV_Analysis_Ready.csv", "text/csv")
-
-st.caption("Dashboard built from HIV_Analysis_Ready_18_60 dataset · For monitoring & program insight purposes.")
